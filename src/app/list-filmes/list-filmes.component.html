@@ -1,0 +1,9 @@
+<h2>Novidades</h2>
+<div *ngFor="let filme of filmes">
+  <h3>
+    <a [title]="filme.name" [routerLink]="['/filmes', filme.id]">
+      {{ filme.name }}
+    </a>
+  </h3>
+  <p *ngIf="filme.description">Sinopse: {{ filme.description }}</p>
+</div>
